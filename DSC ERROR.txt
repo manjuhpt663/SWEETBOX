@@ -1,0 +1,23 @@
+How to solve “Failed to establish connection to the server . Kindly restart the Emsigner” at the time register/update DSC on GST Portal and file online Form GSTR-3b online with Digital signature
+
+1.  Uninstall previous Emsigner and Download Emsigner latest version from GST Site.
+
+2.  Install your DST Token in your computer.
+
+3. For Chrome : Open Chrome -- Settings -- Advance -- Content Setting -- Java script -- 
+Under Allow Tab Click on “Add” on right side 
+And add this address https://120.0.0.1:1585​
+
+4.  For Mozila Firefox : go to options -- Security -- Exceptions
+Add https://120.0.0.1:1585​ -- Click Allow
+
+5. Search CMD (Command Prompt) And Run as Administrator
+  Type in the following line in CMD and Press Enter
+
+netsh interface portproxy add v4tov4 listenport=1645 listenaddress=127.0.0.1 connectport=1585 connectaddress=127.0.0.1
+
+6. Open new tab and open this link https://127.0.0.1:1585​
+
+7. On last row click advance or
+
+8. Click Proceed to 127.0.0.1 (unsafe) – (This will show This page isn’t working no need to worry)
